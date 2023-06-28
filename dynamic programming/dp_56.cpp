@@ -9,8 +9,7 @@ int countSquares(int n, int m, vector<vector<int>> &arr) {
         for (int j = 1; j < m; j++) {
             if (arr[i][j] == 0) dp[i][j] = 0;
             else {
-                dp[i][j] = 1 + min(dp[i - 1][j],
-                                   min(dp[i - 1][j - 1], dp[i][j - 1]));
+                dp[i][j] = 1 + min(dp[i - 1][j],min(dp[i - 1][j - 1], dp[i][j - 1]));
             }
         }
     }
